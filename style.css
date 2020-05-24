@@ -1,0 +1,16 @@
+/*We use flexbox to be sure that red squares appear stacks and in line, and then stuck over
+each other as soon as they don't fit in the grid div with parameter*/
+.grid{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: yellow;
+    
+}
+/*Here, we are using only the div elements inside .grid*/
+.grid div{
+    height: 20px;
+    width: 20px;
+    background-color: red;
+}
