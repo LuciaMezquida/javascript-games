@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+
+}
+
 /*We use flexbox to be sure that red squares appear stacks and in line, and then stuck over
 each other as soon as they don't fit in the grid div with parameter*/
 .grid {
@@ -16,4 +21,18 @@ each other as soon as they don't fit in the grid div with parameter*/
 /*Here, we are going to add some styling to our tetrominoes*/
 .tetromino {
     background-color: blue;
+}
+
+.mini-grid {
+    margin-left: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: yellow;
+}
+
+.mini-grid div {
+    height: 20px;
+    width: 20px;
 }
