@@ -10,15 +10,19 @@ body {
 }
 
 #start-button {
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
-    font-size: 80%;
+    font-size: 90%;
     border-radius: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rosybrown;
+    color: seashell;
+    border: unset;
+    width: 134px;
 }
 
 #score {
-    font-size: 43px;
+    font-size: 60px;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -26,7 +30,7 @@ body {
 #score_button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 150%;
-    padding: 30px;
+    padding: 15px;
     margin: 47px;
     background: floralwhite;
     border-radius: 35px;
@@ -34,6 +38,7 @@ body {
     flex-direction: column;
     flex: 0;
     text-align: center;
+
 }
 
 .container {
