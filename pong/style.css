@@ -1,0 +1,30 @@
+html {
+    background-color: floralwhite;
+   
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 3px 6px 2px lightslategray;
+    color: rgb(79, 41, 118);
+
+}
+
+#canvas {
+    border: 5px solid rgb(79, 41, 118);
+    background: rgb(248, 247, 246);
+}
+
+#pong {
+    display: flex;
+    justify-content: center;
+}
+
+#commanders {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
