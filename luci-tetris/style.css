@@ -59,7 +59,6 @@ each other as soon as they don't fit in the grid div with parameter*/
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(137, 241, 210);
-    
 }
 /*Here, we are using only the div elements inside .grid*/
 .grid div {
