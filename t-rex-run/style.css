@@ -1,0 +1,7 @@
+.dino {
+    position: absolute; /*así me aseguro que el dino estará abajo*/
+    bottom: 0px; /*así me aseguro que el dino estará abajo*/
+    width: 60px;
+    height: 60px;
+    background-color: red;
+}
