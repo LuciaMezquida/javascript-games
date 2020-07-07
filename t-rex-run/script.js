@@ -51,6 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
         obstacle.classList.add('obstacle');
         grid.appendChild(obstacle);
         obstacle.style.left = obstaclePosition + 'px';
+
+        let timerId = setInterval(function(){
+            //si un obstaculo golpea la posición 0 necesitamos borrar el intervalo
+            if (obstaclePosition === 0) {
+                clearInterval(timerId);
+                alert('Game Over');
+            }
+            obstaclePosition -= 10; //queremos restar 10px cada 20 milisegundos
+            obstacle.style.left = obstaclePosition + 'px'; //queremos mover el dino a la izq
+        }, 20);
     }
     generateObstacles();
 
