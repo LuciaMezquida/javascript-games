@@ -1,18 +1,18 @@
 .dino {
     position: absolute; /*así me aseguro que el dino estará abajo*/
     bottom: 0px; /*así me aseguro que el dino estará abajo*/
-    width: 60px;
-    height: 60px;
-    background-image: url("https://img.icons8.com/ios/60/000000/kawaii-dinosaur--v2.png");
+    width: 80px;
+    height: 80px;
+    background-image: url("https://img.icons8.com/ios/80/000000/kawaii-dinosaur--v2.png");
     background-repeat: no-repeat;
 }
 
 .obstacle {
     position: absolute;
     bottom: 0px;
-    width: 60px;
-    height: 60px;
-    background-image: url("https://img.icons8.com/plasticine/70/000000/cactus.png");
+    width: 80px;
+    height: 80px;
+    background-image: url("https://img.icons8.com/plasticine/80/000000/cactus.png");
     background-repeat: no-repeat;
 }
 

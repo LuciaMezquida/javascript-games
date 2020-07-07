@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let timerId = setInterval(function(){
             //si se cumplen las 3 cond, coinciden el obstaculo con el dino y borramos el intervalo
-            if (obstaclePosition > 0 && obstaclePosition < 60 && position < 60) { 
+            if (obstaclePosition > 0 && obstaclePosition < 80 && position < 80) { 
                 clearInterval(timerId);
                 alert.innerHTML = 'Game Over';
                 isGameOver = true; //para que los obstaculos dejen de moverse
