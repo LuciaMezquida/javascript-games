@@ -1,6 +1,7 @@
 //vamos a mover el dino 150px arriba y 150 px abajo usando el teclado
 document.addEventListener('DOMContentLoaded', () => {
     const dino = document.querySelector('.dino')
+    const grid = document.querySelector('.grid');
     let isJumping = false;
     let gravity = 0.9;
 
@@ -41,9 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
             position = position * gravity;
             dino.style.bottom = position + 'px';
             console.log(dino.style.bottom)
-            
-           
         }, 20) //20 milliseconds
     }
+
+    const generateObstacles = () => {
+        let obstaclePosition = 1000; //1000 px desde donde está nuestro dino
+        const obstacle = document.createElement('div');
+        obstacle.classList.add('obstacle');
+        grid.appendChild(obstacle);
+        obstacle.style.left = obstaclePosition + 'px';
+    }
+    generateObstacles();
 
 });
