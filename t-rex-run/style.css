@@ -3,7 +3,8 @@
     bottom: 0px; /*así me aseguro que el dino estará abajo*/
     width: 60px;
     height: 60px;
-    background-color: red;
+    background-image: url("https://img.icons8.com/ios/60/000000/kawaii-dinosaur--v2.png");
+    background-repeat: no-repeat;
 }
 
 .obstacle {
@@ -11,5 +12,13 @@
     bottom: 0px;
     width: 60px;
     height: 60px;
-    background-color: orange;
+    background-image: url("https://img.icons8.com/plasticine/70/000000/cactus.png");
+    background-repeat: no-repeat;
+}
+
+#alert {
+    margin-top: 20%;
+    text-align: center;
+    font-family: monospace;
+    font-size: 3.8rem;
 }
