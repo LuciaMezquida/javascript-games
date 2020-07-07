@@ -2,8 +2,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const dino = document.querySelector('.dino')
     const grid = document.querySelector('.grid');
+    const alert = document.getElementById('alert');
     let isJumping = false;
     let gravity = 0.9;
+    let isGameOver = false;
 
     const control = (e) => {
         if (e.keyCode === 32) { //32 is the space bar
@@ -46,21 +48,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const generateObstacles = () => {
+        let randomTime = Math.random() * 4000; //generar obstaculos al azar
         let obstaclePosition = 1000; //1000 px desde donde está nuestro dino
         const obstacle = document.createElement('div');
-        obstacle.classList.add('obstacle');
+        if (!isGameOver) obstacle.classList.add('obstacle'); //al dejar de generar style al obstaculo, dejan de verse
         grid.appendChild(obstacle);
         obstacle.style.left = obstaclePosition + 'px';
 
         let timerId = setInterval(function(){
-            //si un obstaculo golpea la posición 0 necesitamos borrar el intervalo
-            if (obstaclePosition === 0) {
+            //si se cumplen las 3 cond, coinciden el obstaculo con el dino y borramos el intervalo
+            if (obstaclePosition > 0 && obstaclePosition < 60 && position < 60) { 
                 clearInterval(timerId);
-                alert('Game Over');
+                alert.innerHTML = 'Game Over';
+                isGameOver = true; //para que los obstaculos dejen de moverse
             }
             obstaclePosition -= 10; //queremos restar 10px cada 20 milisegundos
             obstacle.style.left = obstaclePosition + 'px'; //queremos mover el dino a la izq
         }, 20);
+        if (!isGameOver) setTimeout(generateObstacles, randomTime); //temporizador que ejecuta una función dp de que transcurre un tiempo establecido.
+
     }
     generateObstacles();
 
