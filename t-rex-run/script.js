@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
             //move down
             if (count === 15) {
                 clearInterval(timerId) // with clearInterval we stop the up functionality
-                console.log('down')
                 let downTimerId = setInterval(function(){
                     if (count === 0) {
                         clearInterval(downTimerId);// we stop de down functionality
@@ -38,12 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 20)
             }
             //move up
-            console.log('up')
             position += 30;
             count++;
             position = position * gravity;
             dino.style.bottom = position + 'px';
-            console.log(dino.style.bottom)
         }, 20) //20 milliseconds
     }
 
@@ -61,6 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(timerId);
                 alert.innerHTML = 'Game Over';
                 isGameOver = true; //para que los obstaculos dejen de moverse
+                //borrar todos los divs hijos
+                while (grid.firstChild) {
+                    grid.removeChild(grid.lastChild)
+                }
             }
             obstaclePosition -= 10; //queremos restar 10px cada 20 milisegundos
             obstacle.style.left = obstaclePosition + 'px'; //queremos mover el dino a la izq
