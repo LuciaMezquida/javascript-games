@@ -1,6 +1,8 @@
+/*cloud, dinosaur, rock and cactus icon by Icons8</a>*/
+
 .dino {
     position: absolute; /*así me aseguro que el dino estará abajo*/
-    bottom: 0px; /*así me aseguro que el dino estará abajo*/
+    bottom: 10px; /*así me aseguro que el dino estará abajo*/
     width: 80px;
     height: 80px;
     background-image: url("https://img.icons8.com/ios/80/000000/kawaii-dinosaur--v2.png");
@@ -9,10 +11,46 @@
 
 .obstacle {
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     width: 80px;
     height: 80px;
     background-image: url("https://img.icons8.com/plasticine/80/000000/cactus.png");
+    background-repeat: no-repeat;
+}
+
+.cloud {
+    position: absolute;
+    bottom: 500px;
+    width: 100px;
+    height: 100px;
+    background-image: url("https://img.icons8.com/wired/100/000000/clouds.png");
+    background-repeat: no-repeat;
+}
+
+.bird {
+    position: absolute;
+    bottom: 400px;
+    width: 35px;
+    height: 35px;
+    background-image: url("https://img.icons8.com/wired/100/000000/clouds.png");
+    background-repeat: no-repeat;
+}
+
+.ufo {
+    position: absolute;
+    bottom: 650px;
+    width: 30px;
+    height: 30px;
+    background-image: url("https://img.icons8.com/material-rounded/30/000000/sci-fi.png");
+    background-repeat: no-repeat;
+}
+
+.rock {
+    position: absolute;
+    bottom: 5px;
+    width: 17px;
+    height: 17px;
+    background-image: url("https://img.icons8.com/small/16/000000/rock.png");
     background-repeat: no-repeat;
 }
 
@@ -20,5 +58,5 @@
     margin-top: 20%;
     text-align: center;
     font-family: monospace;
-    font-size: 3.8rem;
+    font-size: 4.1rem;
 }
