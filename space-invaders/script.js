@@ -16,7 +16,27 @@ document.addEventListener('DOMContentLoaded', () =>{
                            30, 31, 32, 33, 34, 35, 36, 37, 38, 39];
     
     //Draw the alien invaders
-    alienInvaders.forEach( invader => squares[currentInvaderIndex + invader].classList.add('invader'))
+    alienInvaders.forEach( invader => squares[currentInvaderIndex + invader].classList.add('invader'));
+
+    //Draw the shooter
+    squares[currentShooterIndex].classList.add('shooter');
+
+    //Move the shooter along the line
+    function moveShooter(e) {
+        squares[currentShooterIndex].classList.remove('shooter');
+        switch(e.keyCode) {
+            case 37: //left arrow
+                if (currentShooterIndex % width !== 0) currentShooterIndex -= 1;
+                break;
+            case 39: //right arrow
+                if (currentShooterIndex % width < width - 1) currentShooterIndex += 1;
+                break;
+            default:
+                console.log("NOT THAT KEY!!!")
+        }
+        squares[currentShooterIndex].classList.add('shooter');
+    }
+    document.addEventListener('keydown', moveShooter);
 
 
 
