@@ -38,6 +38,44 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
     document.addEventListener('keydown', moveShooter);
 
+    //Move the alien invaders
+    function moveInvaders() {
+        const leftEdge = alienInvaders[0] % width === 0;
+        const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1;
+
+        if ((leftEdge && direction === -1) || (rightEdge && direction === 1)) {
+            direction = width; //it will move down a whole row in the grid
+        } else if (direction === width) {
+            if (leftEdge) direction = 1;
+            else direction = -1;
+        }
+        //let's move over the alien array to move any invader
+        for (let i = 0; i <= alienInvaders.length - 1; i++) {
+            squares[alienInvaders[i]].classList.remove('invader');
+        }
+        for (let i = 0; i <= alienInvaders.length - 1; i++) {
+            alienInvaders[i] += direction;
+        }
+        for (let i = 0; i <= alienInvaders.length - 1; i++) {
+            squares[alienInvaders[i]].classList.add('invader');
+        }
+
+        //Decide a game over
+        if (squares[currentShooterIndex].classList.contains('invader', 'shooter')) {
+            resultDisplay.textContent = 'Game Over';
+            squares[currentShooterIndex].classList.add('boom');
+            clearInterval(invaderId);
+        }
+        //If any of the aliens miss the shooter but reach the end of the grid, the game is over
+        for (let i = 0; i <= alienInvaders.length - 1; i++) {
+            if (alienInvaders[i] > (squares.length - (width - 1))) { //the alien is in the last 15 squares
+                resultDisplay.textContent = 'Game Over';
+                clearInterval(invaderId);
+            }
+        }
+    }
+    //We need to invert the last function every 500 miliseconds
+    invaderId = setInterval(moveInvaders, 700);
 
 
 })
