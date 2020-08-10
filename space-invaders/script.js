@@ -77,5 +77,43 @@ document.addEventListener('DOMContentLoaded', () =>{
     //We need to invert the last function every 500 miliseconds
     invaderId = setInterval(moveInvaders, 700);
 
+    //Shoot at aliens
+    function shoot(e) {
+        let laserId = null;
+        let currentLaserIndex = currentShooterIndex;
+        //move the laser from the shooter to the invader
+        function moveLaser() {
+            squares[currentLaserIndex].classList.remove('laser');
+            currentLaserIndex -= width;
+            squares[currentLaserIndex].classList.add('laser');
+            if(squares[currentLaserIndex].contains('invader')) {
+                squares[currentLaserIndex].classList.remove('laser');
+                squares[currentLaserIndex].classList.remove('invader');
+                squares[currentLaserIndex].classList.add('boom');
+                //We want the boom to appear for a very short time. We'll remove the boom after 250 milliseconds
+                setTimeout(() => squares[currentLaserIndex].classList.remove('boom'), 250);
+                clearInterval(laserId);
+                //Array of invaders we are taken down. We push a new item to our alienInvadersTakenDown array
+                const alienTakenDown = alienInvaders.indexOf(currentLaserIndex);
+                alienInvadersTakenDown.push(alienTakenDown);
+                result++; //Then we add 1 to our result;
+                resultDisplay.textContent = result; // and display the result in our resultDisplay
+            }
+            //If the laser is in the very first 15 squares we want to clear this interval and remove the laser class from the grid
+            if (currentLaserIndex < width) {
+                clearInterval(laserId);
+                setTimeout(() => squares[currentLaserIndex].classList.remove('laser'), 100);
+            }
+        }
+
+        document.addEventListener('keyup', e => {
+            if (e.keyCode === 32) {
+                laserId = setInterval(moveLaser, 100);
+            }
+        })
+    }
+
+    document.addEventListener('keyup', shoot);
+
 
 })
