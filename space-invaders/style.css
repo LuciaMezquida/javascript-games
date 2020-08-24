@@ -8,32 +8,32 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid;
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     margin: auto;
 }
 /*Damos un alto y ancho de 300px al main div y 20 para cada cuadro del grid. al ser de 15 x 15, nos aseguramos
 que los cuadros 'cuadran' en el main div*/
 .grid div {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 .shooter {
-    background-color: blue;
+    background-image: url(https://img.icons8.com/office/40/000000/space-fighter.png);
 }
 
 .invader {
-    background-color: purple;
+    background-image: url(https://img.icons8.com/color/40/000000/predator.png);
     border-radius: 10px;
 }
 /*When the shooter hits an invader*/
 .boom {
-    background-color: red;
+    background-image: url(https://img.icons8.com/office/40/000000/flash-bang.png);
 }
 
 .laser {
-    background-color: yellow;
+    background-image: url(https://img.icons8.com/fluent/40/000000/conflict.png);
 }
 
 
