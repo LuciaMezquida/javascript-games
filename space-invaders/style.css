@@ -77,6 +77,18 @@ img {
     margin-top: -6px;
 }
 
+.icons {
+    color: white;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 0.8em;
+    margin-top: 56px;
+}
+
+.icons a {
+    color: white;
+}
+
 @media all and (max-width: 1200px) and (min-width: 550px) {
     body{
         margin-top: 10%;
@@ -118,6 +130,10 @@ img {
     img {
         width: 30%;
         margin-top: -4px;
+    }
+
+    .icons {
+        font-size: 0.5em;
     }
 }
 
@@ -164,6 +180,11 @@ img {
         width: 20%;
         padding-right: 2px;
         margin-top: -3px;
+    }
+
+    .icons {
+        font-size: 3px;
+        margin-top: 30px;
     }
 }
 
