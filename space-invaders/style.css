@@ -77,4 +77,93 @@ img {
     margin-top: -6px;
 }
 
+@media all and (max-width: 1200px) and (min-width: 550px) {
+    body{
+        margin-top: 10%;
+    }
+    .grid {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .grid div {
+        width: 20px;
+        height: 20px;
+    }
+
+    .shooter {
+        background-image: url(https://img.icons8.com/office/20/000000/space-fighter.png);
+    }
+    
+    .invader {
+        background-image: url(https://img.icons8.com/color/20/000000/predator.png);
+    }
+    /*When the shooter hits an invader*/
+    .boom {
+        background-image: url(https://img.icons8.com/office/20/000000/flash-bang.png);
+    }
+    
+    .laser {
+        background-image: url(https://img.icons8.com/fluent/20/000000/conflict.png);
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .instructions p{
+        font-size: 0.8em
+    }
+
+    img {
+        width: 30%;
+        margin-top: -4px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    body{
+        margin-top: 10%;
+    }
+
+    .grid {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .grid div {
+        width: 10px;
+        height: 10px;
+    }
+
+    .shooter {
+        background-image: url(https://img.icons8.com/office/10/000000/space-fighter.png);
+    }
+    
+    .invader {
+        background-image: url(https://img.icons8.com/color/10/000000/predator.png);
+    }
+    /*When the shooter hits an invader*/
+    .boom {
+        background-image: url(https://img.icons8.com/office/10/000000/flash-bang.png);
+    }
+    
+    .laser {
+        background-image: url(https://img.icons8.com/fluent/10/000000/conflict.png);
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .instructions p{
+        font-size: 3px;
+        margin-left: 20px;
+    } 
+    img {
+        width: 20%;
+        padding-right: 2px;
+        margin-top: -3px;
+    }
+}
 
