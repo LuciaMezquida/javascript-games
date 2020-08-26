@@ -130,5 +130,4 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     document.addEventListener('keyup', shoot);
 
-
 })
